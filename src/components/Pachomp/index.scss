@@ -1,0 +1,51 @@
+.pacchomp {
+    position: relative;
+    background: transparent;
+    z-index: 1;
+
+    &::before,&::after{
+        content: '';
+        position: absolute;
+        top: -936px;
+        left: -936px;
+        display: block;
+        border-radius: 50%;
+        height: 0;
+        width: 0;
+    }
+
+    &::before{
+        // animation: chunk-top 10s ease infinite;
+        transform: rotate(-105deg);
+        border: 936px solid #FFF671;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+    }
+    
+    &::after{
+        // animation: chunk-bot 10s ease infinite;
+        transform: rotate(15deg);
+        border: 936px solid #FFF671;
+        border-left-color: transparent;
+        border-top-color: transparent;
+    }
+}
+
+@keyframes chunk-top {
+    0%,100% {
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(-105deg);
+    }
+    
+}
+@keyframes chunk-bot {
+    0%,100% {
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(15deg);
+    }
+    
+}
