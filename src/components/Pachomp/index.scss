@@ -15,16 +15,16 @@
     }
 
     &::before{
-        // animation: chunk-top 10s ease infinite;
-        transform: rotate(-105deg);
+        animation: chunk-top 10s ease infinite;
+        // transform: rotate(-105deg);
         border: 936px solid #FFF671;
         border-right-color: transparent;
         border-bottom-color: transparent;
     }
     
     &::after{
-        // animation: chunk-bot 10s ease infinite;
-        transform: rotate(15deg);
+        animation: chunk-bot 10s ease infinite;
+        // transform: rotate(15deg);
         border: 936px solid #FFF671;
         border-left-color: transparent;
         border-top-color: transparent;
