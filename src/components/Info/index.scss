@@ -2,14 +2,127 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 1873px;
-    padding-top: 196px;
+    height: 1947px;
+    padding-top: 110px;
     align-items: center;
-    gap: 242px;
+    gap: 202px;
     text-align: center;
+    overflow: hidden;
+    
+  background: url("./assets/images/pacbgmangif.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+//   background-color: rgba(0, 0, 0, 0.5);
 
-    img{
-        width: 824px;
-        height: 488px;
+    .cherry{
+        position: absolute;
+        z-index: 5;
+        width: 101px;
+        height: 118px;
+        top: 800px;
+        right: 70px;
+        transform: rotate(14.36deg);
+    }
+    .apple{
+        position: absolute;
+        z-index: 5;
+        right: 0;
+        width: 346px;
+        height: 356px;
+        top: 1070px;
+        transform: rotate(-9.12deg);
+    }
+    .orange{
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        width: 313px;
+        height: 371px;
+        top: 850px;
+        transform: rotate(15.67deg);
+    }
+    .straw{
+        position: absolute;
+        z-index: 5;
+        width: 83px;
+        height: 91px;
+        left: 390px;
+        top: 1250px;
+    }
+    .infopics {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .infopac{
+            width: 156px;
+            height: 38px;
+        }
+        .infopic {
+            height: 277px;
+            width: 824px;
+        }
+        .infodesc{
+            height: 106px;
+            width: 824px;
+        }
+        .infocontent{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            span,h3 {
+                font-family: "Autom";
+                font-size: 64px;
+                margin: 10px 0;
+                padding: 0;
+            }
+            h3{
+                color: #FBED1F;
+            }
+        }
+        .getstarted{
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'ClashDisplay';
+            width: 188px;
+            height: 51px;
+            font-size: 18px;
+            outline: none;
+            border-radius: 12px;
+            padding: 16px;
+            font-weight: 400;
+            text-align: center;
+            background-color: black;
+            border: 0.125em solid #000AFF;
+            transition: background-color 0.5s linear;
+            cursor: pointer;
+            color: white;
+            text-shadow: 
+            0 0 0.125em hsl(0, 0%, 100%),
+            0 0 0.45em #000AFF;
+            box-shadow: 
+            inset 0 0 0.5em 0 #000AFF,
+            0 0 0.5em 0 #000AFF;
+            position: relative;
+            font-family: 'ClashDisplay';
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                box-shadow: 0 0 2em 0.5em #000AFF;
+                opacity: 1;
+                transition: opacity 0.5s linear;
+            }
+        }
     }
 }

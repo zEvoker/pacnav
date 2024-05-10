@@ -7,7 +7,7 @@ html {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: black;
+  /* background-color: black; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,12 +20,47 @@ body {
   padding: 0;
   display: block;
   overflow-x: hidden;
-  overflow-y: visible;
   width: 100vw;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+
+  &::-webkit-scrollbar {
+      display: none;
+  }
 }
 
 @font-face {
   font-family: "CrackMan";   /*Can be any text*/
   src: local("CrackMan"),
     url("./assets/fonts/CrackMan.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ClashDisplay";   /*Can be any text*/
+  src: local("ClashDisplay"),
+    url("./assets/fonts/ClashDisplay-Variable.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Autom";   /*Can be any text*/
+  src: local("Autom"),
+    url("./assets/fonts/Autom-Bold.otf") format("opentype");
+}
+
+/* Hide the vertical scrollbar */
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Optional: Style the track and thumb of the scrollbar */
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
 }

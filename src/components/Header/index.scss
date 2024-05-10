@@ -3,6 +3,17 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border-bottom: 2px solid #FBED1F;
+
+    // &:after{
+    //     content: '';
+    //     position: absolute;
+    //     top: 100px;
+    //     left: 3%;
+    //     width: 94%;
+    //     height: 1px;
+    //     background-color: #FBED1F;
+    // }
 
     h3{
         font-family: "CrackMan";
@@ -10,6 +21,7 @@
         font-weight: 400;
         text-align: center;
         color: white;
+        cursor: pointer;
     }
 
     .homeabout {
@@ -21,6 +33,7 @@
         transform: translateX(30px);
 
         span{
+            font-family: "ClashDisplay";
             font-weight: 400;
             font-size: 20px;
             line-height: 30px;
@@ -45,7 +58,7 @@
         font-size: 20px;
         text-align: center;
         line-height: 30px;
-        border-radius: 12px;
+        border-radius: 10px;
         background-color: black;
         border: 0.125em solid #FBED1F;
         transition: background-color 0.5s linear;
@@ -58,20 +71,20 @@
         inset 0 0 0.5em 0 #FBED1F,
         0 0 0.5em 0 #FBED1F;
         position: relative;
-
-        &::before {
-            content: '';
-            pointer-events: none;
-            position: absolute;
-            background: #FBED1F;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: perspective(1em) rotateX(40deg) scale(1,0.35);
-            filter: blur(1em);
-            opacity: 0.7;
-        }
+        font-family: 'ClashDisplay';
+        // &::before {
+        //     content: '';
+        //     pointer-events: none;
+        //     position: absolute;
+        //     background: #FBED1F;
+        //     top: 100%;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     transform: perspective(1em) rotateX(40deg) scale(1,0.35);
+        //     filter: blur(1em);
+        //     opacity: 0.7;
+        // }
 
         &::after {
             content: '';
@@ -124,37 +137,62 @@
                 background-repeat: no-repeat;
                 animation: flicker 0.5s linear infinite;
             }
+
+            &:hover{
+                background: url("../../assets/images/blueghost.png");
+                background-size: cover;
+
+                &::before{
+                    background: url("../../assets/images/blueghostwalk.png");
+                    background-size: cover;
+                }
+            }
         }
+        .eat{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
 
-        .pacman{
-            height: 34px;
-            width: 31px;
-            background: url("../../assets/images/pacman.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            z-index: 1;
-
-            &::before{
-                opacity: 0;
-                content: '';
-                display: block;
+            .pacman{
                 height: 34px;
-                width: 34px;
-                background: url("../../assets/images/shutpac.png");
+                width: 31px;
+                background: url("../../assets/images/pacman.png");
                 background-size: cover;
                 background-repeat: no-repeat;
                 z-index: 1;
-                animation: chomp 0.5s linear infinite;
+                
+                &::before{
+                    opacity: 0;
+                    content: '';
+                    display: block;
+                    height: 34px;
+                    width: 34px;
+                    background: url("../../assets/images/shutpac.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    z-index: 1;
+                    animation: chomp 0.5s linear infinite;
+                }
             }
-        }
+        
+            .pellets{
+                height: 6.4px;
+                width: 147px;
+                background: url("../../assets/images/pellets.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                animation: moveleft 0.5s linear infinite;
+            }
 
-        .pellets{
-            height: 6.4px;
-            width: 147px;
-            background: url("../../assets/images/pellets.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            animation: moveleft 0.5s linear infinite;
+            &:hover{
+                .pacman::before{
+                    animation: chomp 0.25s linear infinite;
+                }
+                .pellets{
+                    animation: moveleft 0.25s linear infinite;
+                }
+            }
         }
     }
 }

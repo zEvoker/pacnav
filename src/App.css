@@ -14,3 +14,16 @@
     animation: fadeOut 1s 1s;
     animation-fill-mode: forwards;
 }
+
+.container{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

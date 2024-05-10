@@ -9,8 +9,10 @@ const Header = () => {
             <h3>PAC-NAV</h3>
             <div className="headeranim">
                 <div className="ghosts"></div>
-                <div className="pacman"></div>
-                <div className="pellets"></div>
+                <div className="eat">
+                    <div className="pacman"></div>
+                    <div className="pellets"></div>
+                </div>
             </div>
             <div className="homeabout">
                 <span>HOME</span>
