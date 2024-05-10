@@ -45,6 +45,12 @@
                 0 0 0.125em hsl(0, 0%, 100%),
                 0 0 0.45em #FBED1F;
             }
+
+            &:hover{
+                text-shadow: 
+                0 0 0.125em hsl(0, 0%, 100%),
+                0 0 0.45em #FBED1F;
+            }
         }
     }
 
@@ -126,6 +132,7 @@
             background: url("../../assets/images/ghosts.png");
             background-size: cover;
             background-repeat: no-repeat;
+            cursor: pointer;
 
             &::before{
                 display: block;
@@ -153,6 +160,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 10px;
+            cursor: pointer;
 
             .pacman{
                 height: 34px;

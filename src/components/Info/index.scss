@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 1947px;
+    height: 1915px;
     padding-top: 110px;
     align-items: center;
     gap: 202px;
@@ -23,6 +23,10 @@
         top: 800px;
         right: 70px;
         transform: rotate(14.36deg);
+
+        &:hover{
+            transform: scale(1.1) rotate(14.36deg);
+        }
     }
     .apple{
         position: absolute;
@@ -32,6 +36,10 @@
         height: 356px;
         top: 1070px;
         transform: rotate(-9.12deg);
+
+        &:hover{
+            transform: scale(1.1) rotate(-9.12deg);
+        }
     }
     .orange{
         position: absolute;
@@ -41,6 +49,10 @@
         height: 371px;
         top: 850px;
         transform: rotate(15.67deg);
+
+        &:hover{
+            transform: scale(1.1) rotate(15.67deg);
+        }
     }
     .straw{
         position: absolute;
@@ -49,6 +61,10 @@
         height: 91px;
         left: 390px;
         top: 1250px;
+
+        &:hover{
+            transform: scale(1.1) ;
+        }
     }
     .infopics {
         display: flex;
@@ -122,6 +138,194 @@
                 box-shadow: 0 0 2em 0.5em #000AFF;
                 opacity: 1;
                 transition: opacity 0.5s linear;
+            }
+        }
+    }
+
+    .infoghosts{
+        position: relative;
+        width: 100%;
+        height: 702px;
+        z-index: 10;
+        margin-top: 130px;
+        display: flex;
+        justify-content: space-around;
+
+        .inky,.blinky,.pinky,.clyde{
+            height: 702px;
+            width: 310px;
+            border-radius: 200px 200px 0 0;
+            
+            .top{
+                height: 318px;
+                transition-delay: 0.5s;
+                border-radius: 200px 200px 0 0;
+            }
+            .bot{
+                height: 384px;
+                transition: 1s ease;
+                display: flex;
+                justify-content: center;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    opacity: 0.5;
+                    transition: 0.5s ease;
+                }
+
+                span{
+                    text-align: center;
+                    width: 310px;
+                    position: absolute;
+                    bottom: 80px;
+                    z-index: 13;
+                    font-family: 'ClashDisplay';
+                    font-weight: 600;
+                    font-size: 38px;
+                    line-height: 54px;
+                }
+
+                &::before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: 384px;
+                    width: 310px;
+                    z-index: 11;
+                    opacity: 0.9;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+        .inky{
+            background: linear-gradient(180deg, #a767f4 0%, #9649fc 100%);
+            .top{
+                background: url('../../assets/images/eyeleft.png');
+                // background-color: #A259FF;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .bot{
+                &::before{
+                    background-color: #A259FF;
+                }
+            }
+            &:hover{
+                .top{
+                    background: url('../../assets/images/eyedown.png');
+                    background-color: #A259FF;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .bot{
+                    img{
+                        opacity: 1;
+                    }
+                    span{
+                        opacity: 0;
+                    }
+                    &::before{
+                        height: 0;
+                    }
+                }
+            }
+        }
+        .blinky{
+            .top{
+                background: url('../../assets/images/eyeleft.png');
+                background-color: #FF7262;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .bot{
+                &::before{
+                    background-color: #FF7262;
+                }
+            }
+            &:hover{
+                .top{
+                    background: url('../../assets/images/eyedown.png');
+                    background-color: #FF7262;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .bot{
+                    img{
+                        opacity: 1;
+                    }
+                    span{
+                        opacity: 0;
+                    }
+                    &::before{
+                        height: 0;
+                    }
+                }
+            }
+        }
+        .pinky{
+            .top{
+                background: url('../../assets/images/eyeright.png');
+                background-color: #0ACF83;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .bot{
+                &::before{
+                    background-color: #0ACF83;
+                }
+            }
+            &:hover{
+                .top{
+                    background: url('../../assets/images/eyedown.png');
+                    background-color: #0ACF83;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .bot{
+                    span{
+                        opacity: 0;
+                    }
+                    img{
+                        opacity: 1;
+                    }
+                    &::before{
+                        height: 0;
+                    }
+                }
+            }
+        }
+        .clyde{
+            .top{
+                background: url('../../assets/images/eyeright.png');
+                background-color: #F24E1E;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .bot{
+                &::before{
+                    background-color: #F24E1E;
+                }
+            }
+            &:hover{
+                .top{
+                    background: url('../../assets/images/eyedown.png');
+                    background-color: #F24E1E;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                .bot{
+                    span{
+                        opacity: 0;
+                    }
+                    img{
+                        opacity: 1;
+                    }
+                    &::before{
+                        height: 0;
+                    }
+                }
             }
         }
     }
