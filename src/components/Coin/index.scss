@@ -1,0 +1,96 @@
+.card{
+    height: 304px;
+    width: 304px;
+    display: flex;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 800px;
+
+    &:hover > .coin{
+        transform: rotateY(-180deg);
+        
+        .back{
+            img{
+                margin-top: 0;
+                opacity: 0;
+            }
+            .coindesc{
+                opacity: 1;
+            }
+        }
+    }
+    
+    .coin {
+    height: 304px;
+    width: 304px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    background-color: #333333;
+
+    .front,.back{
+        height: 334px;
+        width: 334px;
+        box-shadow: 0 0 5px 2px rgba(50,50,50,0.25);
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .front{
+        width: 155px;
+        height: 157px;
+        background-image: url('../../assets/images/coinfront.png');
+        background-size: cover;
+    }
+
+    .back{
+        border-radius: 50%;
+        background-color: #333333;
+        transform: rotateY(180deg);
+
+        img{
+            margin-top: 40px;
+            width: 187px;
+            height: 240px;
+            object-fit: fill;
+            opacity: 1;
+            transition: 2s 1s ease;
+        }
+
+        .coindesc{
+            position: absolute;
+            width: 271px;
+            height: 271px;
+            border-radius: 50%;
+            opacity: 0;
+            transition: 2s 1.2s ease;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .extrabox{
+                padding: 20px;
+                
+                span{
+                    font-family: 'ClashDisplay';
+                    font-weight: 400;
+                    font-size: 16px;
+                    max-width: 158px;
+                }
+            }
+        }
+    }
+}
+}

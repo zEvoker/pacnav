@@ -4,8 +4,14 @@
     justify-content: center;
     flex-direction: column;
     margin: 0 36px;
-    height: 1257px;
-    border: 1px solid wheat;
+    height: 1193px;
+    // border: 1px solid wheat;
+
+    img{
+        position: absolute;
+        width: 1463px;
+        height: 1193px;
+    }
 }
 .dripcont{
     padding: 0 36px;

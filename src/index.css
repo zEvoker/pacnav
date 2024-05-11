@@ -7,7 +7,6 @@ html {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: black; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,52 +15,55 @@ html {
 }
 
 body {
+  display: block;
   margin: 0;
   padding: 0;
-  display: block;
   overflow-x: hidden;
   width: 100vw;
   box-sizing: border-box;
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
   background-color: black;
-  /* Firefox */
-
-  &::-webkit-scrollbar {
-      display: none;
-  }
 }
 
 @font-face {
-  font-family: "CrackMan";   /*Can be any text*/
+  font-family: "CrackMan"; 
   src: local("CrackMan"),
     url("./assets/fonts/CrackMan.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "ClashDisplay";   /*Can be any text*/
+  font-family: "ClashDisplay"; 
   src: local("ClashDisplay"),
     url("./assets/fonts/ClashDisplay-Variable.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Autom";   /*Can be any text*/
+  font-family: "Autom";
   src: local("Autom"),
     url("./assets/fonts/Autom-Bold.otf") format("opentype");
 }
 
-/* Hide the vertical scrollbar */
-body::-webkit-scrollbar {
-  width: 0;
+::-webkit-scrollbar {
+  display: none;
+}
+/* ::-webkit-scrollbar-track{
+  background: url('./assets/images/pellets.png');
+  border-radius: 50%;
+  margin-block: 5em;
+}
+::-webkit-scrollbar-thumb{
+  background: yellow;
+  border-radius: 50%;
 }
 
-/* Optional: Style the track and thumb of the scrollbar */
-body::-webkit-scrollbar-track {
-  background: transparent;
-}
+::-webkit-scrollbar-thumb:hover{
+  background: black;
+} */
 
-body::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
+@supports (scrollbar-color: yellow white) {
+  *{
+    /* scrollbar-color: yellow white; */
+    scrollbar-width: none;
+  }
 }

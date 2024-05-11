@@ -6,8 +6,8 @@
     &::before,&::after{
         content: '';
         position: absolute;
-        top: -936px;
-        left: -936px;
+        top: -956px;
+        left: -956px;
         display: block;
         border-radius: 50%;
         height: 0;
@@ -17,7 +17,7 @@
     &::before{
         animation: chunk-top 10s 2.5s ease infinite;
         // transform: rotate(-105deg);
-        border: 936px solid #F7DE36;
+        border: 956px solid #F7DE36;
         border-right-color: transparent;
         border-bottom-color: transparent;
     }
@@ -25,7 +25,7 @@
     &::after{
         animation: chunk-bot 10s 2.5s ease infinite;
         // transform: rotate(15deg);
-        border: 936px solid #F7DE36;
+        border: 956px solid #F7DE36;
         border-left-color: transparent;
         border-top-color: transparent;
     }
@@ -33,7 +33,7 @@
 
 @keyframes chunk-top {
     0%,50%,100% {
-        transform: rotate(-101deg);
+        transform: rotate(-95deg);
     }
     73%,77%{
         transform: rotate(-45deg);
@@ -42,7 +42,7 @@
 }
 @keyframes chunk-bot {
     0%,50%,100% {
-        transform: rotate(11deg);
+        transform: rotate(5deg);
     }
     73%,77%{
         transform: rotate(-45deg);

@@ -1,6 +1,60 @@
 .footer{
     margin-top: 40px;
-    border-top: 1px solid yellow;
+    // border-top: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .meet{
+        margin: 30px 0;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 50px;
+
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .meetdesc{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transform: translateY(-20px);
+
+            span{
+                font-family: 'ClashDisplay';
+                font-weight: 400;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+        
+        .meetfam{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 25px;
+
+            span{
+                font-family: 'ClashDisplay';
+                font-weight: 600;
+                font-size: 75px;
+                text-align: center;
+                
+                &:first-child{
+                    color: #F7DE36;
+                }
+            }
+
+        }
+    }
     img{
         width: 100vw;
         height: 338px;

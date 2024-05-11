@@ -5,24 +5,25 @@
     height: 1915px;
     padding-top: 110px;
     align-items: center;
-    gap: 202px;
+    gap: 102px;
     text-align: center;
     overflow: hidden;
+    justify-content: space-between;
     
-  background: url("./assets/images/pacbgmangif.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-//   background-color: rgba(0, 0, 0, 0.5);
+//   background: url("./assets/images/pacbgmangif.gif");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-attachment: fixed;
 
     .cherry{
         position: absolute;
         z-index: 5;
         width: 101px;
         height: 118px;
-        top: 800px;
-        right: 70px;
+        top: 840px;
+        right: 0;
         transform: rotate(14.36deg);
+        cursor: pointer;
 
         &:hover{
             transform: scale(1.1) rotate(14.36deg);
@@ -34,8 +35,9 @@
         right: 0;
         width: 346px;
         height: 356px;
-        top: 1070px;
+        top: 1030px;
         transform: rotate(-9.12deg);
+        cursor: pointer;
 
         &:hover{
             transform: scale(1.1) rotate(-9.12deg);
@@ -49,6 +51,7 @@
         height: 371px;
         top: 850px;
         transform: rotate(15.67deg);
+        cursor: pointer;
 
         &:hover{
             transform: scale(1.1) rotate(15.67deg);
@@ -57,13 +60,15 @@
     .straw{
         position: absolute;
         z-index: 5;
-        width: 83px;
-        height: 91px;
-        left: 390px;
-        top: 1250px;
+        width: 86px;
+        height: 94px;
+        left: 420px;
+        top: 1240px;
+        transform: rotate(-19.35deg);
+        cursor: pointer;
 
         &:hover{
-            transform: scale(1.1) ;
+            transform: scale(1.1) rotate(-19.35deg);
         }
     }
     .infopics {
@@ -74,21 +79,23 @@
         gap: 20px;
 
         .infopac{
-            width: 156px;
-            height: 38px;
+            width: 257px;
+            height: 99px;
         }
         .infopic {
             height: 277px;
             width: 824px;
+            transform: translateY(5px);
         }
         .infodesc{
-            height: 106px;
-            width: 824px;
+            height: 84px;
+            width: 820px;
         }
         .infocontent{
             display: flex;
             align-items: center;
             gap: 24px;
+            transform: translateY(7px);
 
             span,h3 {
                 font-family: "Autom";
@@ -155,6 +162,7 @@
             height: 702px;
             width: 310px;
             border-radius: 200px 200px 0 0;
+            cursor: pointer;
             
             .top{
                 height: 318px;
@@ -185,6 +193,7 @@
                     font-weight: 600;
                     font-size: 38px;
                     line-height: 54px;
+                    transition: 0.5s ease;
                 }
 
                 &::before{
@@ -200,10 +209,9 @@
             }
         }
         .inky{
-            background: linear-gradient(180deg, #a767f4 0%, #9649fc 100%);
             .top{
-                background: url('../../assets/images/eyeleft.png');
-                // background-color: #A259FF;
+                background-image: url('../../assets/images/eyeleft.png');
+                background-color: #A259FF;
                 background-size: contain;
                 background-repeat: no-repeat;
             }
@@ -214,7 +222,7 @@
             }
             &:hover{
                 .top{
-                    background: url('../../assets/images/eyedown.png');
+                    background-image: url('../../assets/images/eyedown.png');
                     background-color: #A259FF;
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -234,7 +242,7 @@
         }
         .blinky{
             .top{
-                background: url('../../assets/images/eyeleft.png');
+                background-image: url('../../assets/images/eyeleft.png');
                 background-color: #FF7262;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -246,7 +254,7 @@
             }
             &:hover{
                 .top{
-                    background: url('../../assets/images/eyedown.png');
+                    background-image: url('../../assets/images/eyedown.png');
                     background-color: #FF7262;
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -266,7 +274,7 @@
         }
         .pinky{
             .top{
-                background: url('../../assets/images/eyeright.png');
+                background-image: url('../../assets/images/eyeright.png');
                 background-color: #0ACF83;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -278,7 +286,7 @@
             }
             &:hover{
                 .top{
-                    background: url('../../assets/images/eyedown.png');
+                    background-image: url('../../assets/images/eyedown.png');
                     background-color: #0ACF83;
                     background-size: contain;
                     background-repeat: no-repeat;
@@ -298,7 +306,7 @@
         }
         .clyde{
             .top{
-                background: url('../../assets/images/eyeright.png');
+                background-image: url('../../assets/images/eyeright.png');
                 background-color: #F24E1E;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -310,7 +318,7 @@
             }
             &:hover{
                 .top{
-                    background: url('../../assets/images/eyedown.png');
+                    background-image: url('../../assets/images/eyedown.png');
                     background-color: #F24E1E;
                     background-size: contain;
                     background-repeat: no-repeat;
