@@ -13,6 +13,7 @@ function App() {
   return (
     <>
       <div className='container'>
+      <div className="progress"><div className="travel"></div></div>
       <Header/>
       {/* <Pacmap/> */}
       <Info/>

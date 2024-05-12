@@ -16,6 +16,23 @@ $primary-color: #f7de36;
     animation-fill-mode: forwards;
 }
 
+.progress {
+	position: fixed;
+	left: 0; bottom: 0;
+	width: 100%; height: 1em;
+	background: black;
+  z-index: 100;
+
+  .travel{
+      background: #f7de36;
+      width: 0.7em; height: 0.7em;
+      border-radius: 50%;
+      transform-origin: 0 50%;
+      animation: grow-progress auto linear;
+      animation-timeline: --page-scroll;
+  }
+}
+
 .container{
     overflow-x: hidden;
     overflow-y: scroll;
@@ -27,4 +44,12 @@ $primary-color: #f7de36;
     opacity: 0;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
+    background: url("./assets/images/pacbackground.png");
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+@keyframes grow-progress {
+	from { transform: translateX(0); }
+	to { transform: translateX(calc(100vw - 1em)); }
 }

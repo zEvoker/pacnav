@@ -16,7 +16,7 @@ const Header = () => {
             </div>
             <div className="homeabout">
                 <span>HOME</span>
-                <span>PRODUCT</span>
+                <span><a href="#demo">PRODUCT</a></span>
                 <span>ENGLISH <FontAwesomeIcon icon={faCaretDown}/></span>
             </div>
             <button className='signin'>SIGN IN</button>

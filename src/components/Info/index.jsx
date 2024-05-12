@@ -12,7 +12,11 @@ import cherry from '../../assets/images/cherry.png'
 import straw from '../../assets/images/straw.png'
 import orange from '../../assets/images/orange.png'
 import infopac from '../../assets/images/infopac.png'
-import vangogh from '../../assets/images/vangogh.png'
+import ghostpic1 from '../../assets/images/ghostpic1.png'
+import ghostpic2 from '../../assets/images/ghostpic2.png'
+import ghostpic3 from '../../assets/images/ghostpic3.png'
+import ghostpic4 from '../../assets/images/ghostpic4.png'
+import welcome from '../../assets/images/welcome.png'
 import './index.scss'
 import { useState,useEffect } from 'react'
 
@@ -68,11 +72,12 @@ const Info = () => {
             <img src={orange} className='orange'/>
             <img src={straw} className='straw'/>
             <img src={cherry} className='cherry'/>
+            <img src={welcome} className='welcome' />
             <div className="infoghosts">
-                <div className="inky"><div className="top"></div><div className="bot"><img src={vangogh} alt="" /><span>SATELLITE NAVIGATION</span></div></div>
-                <div className="blinky"><div className="top"></div><div className="bot"><img src={vangogh} alt="" /><span>CAB BOOKING SERVICE</span></div></div>
-                <div className="pinky"><div className="top"></div><div className="bot"><img src={vangogh} alt="" /><span>BUILT-IN GAMES</span></div></div>
-                <div className="clyde"><div className="top"></div><div className="bot"><img src={vangogh} alt="" /><span>PAC-MAN THEMES</span></div></div>
+                <div className="inky"><div className="top"></div><div className="bot"><img src={ghostpic1} alt="" /><span>SATELLITE NAVIGATION</span></div></div>
+                <div className="blinky"><div className="top"></div><div className="bot"><img src={ghostpic2} alt="" /><span>CAB BOOKING SERVICE</span></div></div>
+                <div className="pinky"><div className="top"></div><div className="bot"><img src={ghostpic3} alt="" /><span>BUILT-IN GAMES</span></div></div>
+                <div className="clyde"><div className="top"></div><div className="bot"><img src={ghostpic4} alt="" /><span>PAC-MAN THEMES</span></div></div>
             </div>
         </div>
     )
