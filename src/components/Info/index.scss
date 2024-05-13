@@ -411,3 +411,52 @@
       scale: .7;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .info{
+        justify-content: none;
+        gap: 0;
+        height: 150vh;
+        .cherry,.straw,.apple,.orange{
+            display: none;
+        }
+        .welcome{
+            top: 150vh;
+            width: 90%;
+            height: 25%;
+        }
+        .infopics{
+            .infopac{
+                width: 30%;
+                height: 15%;
+            }
+
+            .infopic{
+                width: 80%;
+                height: 40%;
+            }
+            .infodesc{
+                display: none;
+            }
+            .infocontent{
+                justify-content: center;
+                gap: 2em;
+
+                span,h3{
+                    font-size: 2.5em;
+                }
+            }
+            .getstarted{
+                margin: 10px 0;
+                margin-bottom: 20px;
+                width: 11em;
+                height: 3em;
+                font-size: 1.2em;
+                padding: 1.6em 0;
+            }
+        }
+        .infoghosts{
+            height: 50vh;
+        }
+    }
+}

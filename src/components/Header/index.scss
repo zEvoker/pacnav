@@ -253,3 +253,72 @@
         opacity: 0;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .header {
+        padding: 0 2em;
+        &::after{
+            display: none;
+        }
+        h3{
+            font-size: 2rem;
+        }
+        .homeabout{
+            display: none;
+            gap: 2em;
+            width: max-content;
+            transform: none;
+            span{
+                font-size: 1.8em;
+                &:last-child{
+                    display: none;
+                }
+            }
+        }
+        .signin{
+            display: none;
+            width: 5em;
+            height: 10%;
+            padding: 0;
+            font-size: 1.8rem;
+        }
+        .headeranim{
+            transform: none;
+            height: 2em;
+            width: 27em;
+
+            .ghosts{
+                height: 2em;
+                width: 11em;
+
+                &::before{
+                    height: 2em;
+                    width: 11em;
+                }
+            }
+            .eat{
+                .pacman{
+                    height: 2em;
+                    width: 1.9em;
+                    &::before{
+                        height: 2em;
+                        width: 2em;
+                    }
+                }
+                .pellets{
+                    height: 0.5em;
+                    width: 10.8em;
+                }
+            }
+        }
+    }
+
+    @keyframes moveleft{
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-1.8em);
+        }
+    }
+}

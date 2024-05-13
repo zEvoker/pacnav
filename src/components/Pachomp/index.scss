@@ -50,3 +50,22 @@
     }
     
 }
+
+@media screen and (max-width: 900px) {
+    .pacchomp{
+        &::before,&::after{
+            top: -70vh;
+            left: -70vh;
+        }
+        &::before{
+            border: 70vh solid #F7DE36;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+        }
+        &::after{
+            border: 70vh solid #F7DE36;
+            border-left-color: transparent;
+            border-top-color: transparent;
+        }
+    }
+}

@@ -94,3 +94,41 @@
     }
 }
 }
+
+@media screen and (max-width: 900px) {
+    .card{
+        height: 40%;
+        width: 40%;
+
+        .coin{
+            height: 10em;
+            width: 100%;
+
+            .front{
+                height: 50%;
+                width: 50%;
+            }
+
+            .back{
+                height: 100%;
+                width: 100%;
+
+                .coindesc{
+                    height: 80%;
+                    width: 80%;
+
+                    .extrabox{
+                        padding: 2.5em;
+                        span{
+                            font-size: 1em;
+                        }
+                    }
+                }
+                img{
+                    height: 70%;
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
