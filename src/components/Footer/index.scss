@@ -67,6 +67,22 @@
                 font-size: 20px;
                 text-align: center;
             }
+            .blinker {
+                animation: blink-animation 1s infinite;
+                min-width: 10px;
+                display: inline-block;
+                animation-fill-mode: both;
+                opacity: 0;
+            
+                @keyframes blink-animation {
+                    0%,100% {
+                        opacity: 0;
+                    }
+                    50% {
+                        opacity: 1;
+                    }
+                }
+            }
         }
         
         .meetfam{
@@ -81,12 +97,24 @@
                 font-weight: 600;
                 font-size: 75px;
                 text-align: center;
-                
-                &:first-child{
+                min-width: 25px;
+                display: inline-block;
+                animation-fill-mode: both;
+                transition: color 0.3s ease-out;
+                text-align: center;
+
+                &:hover {
+                    animation: rubberBand 1s;
                     color: #F7DE36;
                 }
             }
+            .meetfirst span{
+                color: #F7DE36;
 
+                &:hover{
+                    color: white;
+                }
+            }
         }
     }
     img{

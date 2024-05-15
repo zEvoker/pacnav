@@ -46,6 +46,12 @@ body {
     url("./assets/fonts/Autom-Bold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "PressStart2P";
+  src: local("PressStart2P"),
+    url("./assets/fonts/PressStart2P-Regular.ttf") format("truetype");
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

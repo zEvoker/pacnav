@@ -126,6 +126,7 @@
                 font-size: 75px;
                 padding: 0;
                 margin: 0;
+                animation: glow 2s ease-in-out infinite alternate;
             }
         }
         span{
@@ -157,3 +158,12 @@
         transform: translateX(calc(-2648px));
     }
 }
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #a9a92d;
+    }
+    to {
+      text-shadow: 0 0 20px #c1c134, 0 0 7px #c3c74d;
+    }
+  }
