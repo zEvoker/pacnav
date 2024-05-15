@@ -4,6 +4,8 @@ import slide1 from '../../assets/images/slide1.png'
 import slide2 from '../../assets/images/slide2.png'
 import slide3 from '../../assets/images/slide3.png'
 import slide4 from '../../assets/images/slide4.png'
+import joybot from '../../assets/images/joybot.png'
+import joytop from '../../assets/images/joytop.png'
 
 const Awards = () => {
     return (
@@ -15,6 +17,10 @@ const Awards = () => {
                 <span>Your feedback is very valuable for us. Join in and share those wonderful memories that you had with us.</span>
             </div>
             <div className="slider">
+                <div className="joytop">
+                    <img src={joytop} alt="" />
+                </div>
+                <img className='joybot' src={joybot} alt="" />
                 <div className="slidetrack">
                     <div className="slide">
                         <img src={slide1} alt="" />

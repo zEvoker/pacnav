@@ -74,10 +74,10 @@ const Info = () => {
             <img src={cherry} className='cherry'/>
             <img src={welcome} className='welcome' />
             <div className="infoghosts">
-                <div className="inky"><div className="top"></div><div className="bot"><img src={ghostpic1} alt="" /><span>SATELLITE NAVIGATION</span></div></div>
-                <div className="blinky"><div className="top"></div><div className="bot"><img src={ghostpic2} alt="" /><span>CAB BOOKING SERVICE</span></div></div>
-                <div className="pinky"><div className="top"></div><div className="bot"><img src={ghostpic3} alt="" /><span>BUILT-IN GAMES</span></div></div>
-                <div className="clyde"><div className="top"></div><div className="bot"><img src={ghostpic4} alt="" /><span>PAC-MAN THEMES</span></div></div>
+                <div className="inky"><div className="top"></div><div className="bot"><img src={ghostpic1} alt="" /><h6>Pac-Nav uses a combination of GPS data, user input, and real-time traffic data to provide accurate and up-to-date information about locations and directions.</h6><span>SATELLITE NAVIGATION</span></div></div>
+                <div className="blinky"><div className="top"></div><div className="bot"><img src={ghostpic2} alt="" /><h6>Pac-Nav tracks the location of both the rider and driver using GPS-tracking technology. As a result, both receive real-time location updates and see the car on the map. </h6><span>CAB BOOKING SERVICE</span></div></div>
+                <div className="pinky"><div className="top"></div><div className="bot"><img src={ghostpic3} alt="" /><h6>Pac-Nav keeps you entertained with our in-built games while you reach your destination. Enjoy classic arcade games that make every journey an adventure.</h6><span>BUILT-IN GAMES</span></div></div>
+                <div className="clyde"><div className="top"></div><div className="bot"><img src={ghostpic4} alt="" /><h6>Pac-Nav lets you navigate the way you want, with a touch of retro flair. Choose a Pacman-inspired avatar on the map and customize your experience to suit your navigation style.</h6><span>PAC-MAN THEMES</span></div></div>
             </div>
         </div>
     )

@@ -16,6 +16,7 @@ const Footer = () => {
 
     return(
         <div className="footer">
+            <div className="scrollpac"></div>
             <div className="meet">
                 <div className="meetfam">
                     <span>PAC-MAN</span><span>TRIVIA</span>
