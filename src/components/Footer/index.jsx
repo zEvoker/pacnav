@@ -121,7 +121,7 @@ const Footer = () => {
                 </div>
                 <div className="meetdesc">
                     <span>{text}</span><span className='blinker'>&#95;</span>
-                    <div className="eater"></div>
+                    {isDeleting && <div className="eater"></div>}
                 </div>
                 <div className="row">
                 <Coin backimg={pinky} name={names[1]} desc={descs[1]} clr="#FFABE7"/>

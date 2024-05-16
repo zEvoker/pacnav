@@ -87,7 +87,6 @@
                 width: 2em;
                 height: 2em;
                 background: transparent;
-                animation: eat 16.63s linear infinite;
                 transform: translateX(-10px);
                 &::before,&::after{
                     content: '';
@@ -108,14 +107,6 @@
                     border: 1em solid #F7DE36;
                     border-left-color: transparent;
                     border-bottom-color: transparent;
-                }
-                @keyframes eat {
-                    0%,82%{
-                        opacity: 0;
-                    }
-                    83.3%{
-                        opacity: 1;
-                    }
                 }
             }
         }
@@ -161,7 +152,7 @@
     .hiddenpellet{
         height: 1em;
         width: 1em;
-        border-radius: 50%;
+        // border-radius: 50%;
         background-color: wheat;
         z-index: -5;
         position: absolute;
