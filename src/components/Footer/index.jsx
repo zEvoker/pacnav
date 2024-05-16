@@ -15,6 +15,8 @@ import { useEffect } from 'react';
 const Footer = () => {
     const descs=["begins each level moving at the same speed as all of the other ghosts, but after you've eaten a certain number of dots, he begins to speed up.","seems to have a tendency to go around blocks in an anticlockwise direction unlike Blinky and Clyde who seem to prefer going clockwise.","is dangerous because he's unpredictable. Given the same choices, he will often take different turns at different times.","is either short-sighted or stupid. He will often turn off rather than approach you. His heart doesn't seem to be in it at all.","is the titular protagonist of the Pac-Man series. Residing in Pac-Land, he regularly favors eating various types of Pac-Dots.",", also known as Pepper, is Pac-Man's wife and sidekick and is the mother of Jr. Pac-Man and Baby Pac-Man.","is the first-born son of Pac-Man and Ms. Pac-Man. During his adventures, he fell in love with Yum-Yum, Blinky's daughter.","is the second-born, infant child of Pac-Man and Ms. Pac-Man, and the younger sibling to Jr. Pac-Man."];
     const names=["Blinky","Pinky","Inky","Clyde"];
+    const [locn, setLocn] = useState([0,0])
+    const [easter, setEaster] = useState(false)
 
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState([]);
@@ -45,6 +47,66 @@ const Footer = () => {
         }
     }
 
+    useEffect(() => {
+        document.addEventListener('keydown', keyPress);
+          return ()=> {
+            document.removeEventListener('keydown', keyPress);
+          }
+     }, []);
+        
+     const checkEasterEgg = (newLocn) => {
+        if (newLocn[0] === 620 && newLocn[1] === -1880) {
+            console.log("hahahaha");
+            setEaster(true);
+        }
+    }
+
+    const keyPress = (e) => {
+        switch (e.which) {
+            case 37: {
+                // left
+                setLocn(prev => {
+                    const newLocn = [prev[0] - 10, prev[1]];
+                    checkEasterEgg(newLocn);
+                    return newLocn;
+                });
+                e.preventDefault();
+                break;
+            }
+            case 38: {
+                // up
+                setLocn(prev => {
+                    const newLocn = [prev[0], prev[1] - 10];
+                    checkEasterEgg(newLocn);
+                    return newLocn;
+                });
+                e.preventDefault();
+                break;
+            }
+            case 39: {
+                // right
+                setLocn(prev => {
+                    const newLocn = [prev[0] + 10, prev[1]];
+                    checkEasterEgg(newLocn);
+                    return newLocn;
+                });
+                e.preventDefault();
+                break;
+            }
+            case 40: {
+                // down
+                setLocn(prev => {
+                    const newLocn = [prev[0], prev[1] + 10];
+                    checkEasterEgg(newLocn);
+                    return newLocn;
+                });
+                e.preventDefault();
+                break;
+            }
+            default:
+        }
+    };
+
     return(
         <div className="footer">
             <div className="scrollpac"></div>
@@ -74,6 +136,9 @@ const Footer = () => {
                 <Coin backimg={babypac} name={"Baby Pac-Man"} desc={descs[7]} clr="#F7DE36"/>                
                 </div>
             </div>
+            <div className="movable" style={{transform: `translateX(${locn[0]}px) translateY(${locn[1]}px)`,}}></div>
+            {!easter && <div className="hiddenpellet"></div>}
+            {easter && <button onClick={()=> window.open("https://www.google.com/logos/2010/pacman10-i.html","_blank")}>click me!</button>}
             <img src={footerpic} alt="" />
         </div>
     )
