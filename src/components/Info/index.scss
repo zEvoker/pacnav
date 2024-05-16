@@ -9,6 +9,10 @@
     text-align: center;
     overflow: hidden;
     justify-content: space-between;
+
+    h1,h2{
+        display: none;
+    }
     
 //   background: url("./assets/images/pacbgmangif.gif");
 //   background-repeat: no-repeat;
@@ -440,6 +444,14 @@
         justify-content: none;
         gap: 0;
         height: 150vh;
+
+        h1,h2{
+            display: block;
+            font-family: 'Autom';
+        }
+        h1{
+            color: #FBED1F;
+        }
         .cherry,.straw,.apple,.orange{
             display: none;
         }
