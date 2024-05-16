@@ -18,7 +18,7 @@ const Footer = () => {
 
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState([]);
-    const [delta, setDelta] = useState(50);
+    const [delta, setDelta] = useState(100);
     const [idx, setIdx] = useState(0);
     const descStr = "As Pac-Nav captures the essence of the elements from the 80's arcade game, here are some interesting trivia for its super fans "
     const txt = [[...descStr]];
@@ -59,6 +59,7 @@ const Footer = () => {
                 </div>
                 <div className="meetdesc">
                     <span>{text}</span><span className='blinker'>&#95;</span>
+                    <div className="eater"></div>
                 </div>
                 <div className="row">
                 <Coin backimg={pinky} name={names[1]} desc={descs[1]} clr="#FFABE7"/>
