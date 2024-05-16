@@ -83,6 +83,32 @@
                     }
                 }
             }
+            .eater{
+                width: 2em;
+                height: 2em;
+                background: transparent;
+                transform: translateX(-10px);
+                &::before,&::after{
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    border-radius: 50%;
+                    height: 0;
+                    width: 0;
+                }
+                &::before{
+                    animation: scrpactop 0.4s linear infinite;
+                    border: 1em solid #F7DE36;
+                    border-right-color: transparent;
+                    border-top-color: transparent;
+                }
+                &::after{
+                    animation: scrpacbot 0.4s linear infinite;
+                    border: 1em solid #F7DE36;
+                    border-left-color: transparent;
+                    border-bottom-color: transparent;
+                }
+            }
         }
         
         .meetfam{
