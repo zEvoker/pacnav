@@ -58,6 +58,9 @@ const Info = () => {
 
     return(
         <div className="info">
+            <h1>We're working on the mobile view</h1>
+            <h1>Please use the site on laptops only for now</h1>
+            <h2>Sorry for the inconvenience caused</h2>
             <div className="infopics">
                 <img className='infopic' src={images[currentImageIndex]}/>
                 <div className="infocontent">

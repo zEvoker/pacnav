@@ -45,12 +45,32 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        gap: 50px;
+        gap: 40px;
 
         .row{
+            margin: 10px 0;
             display: flex;
             align-items: center;
             justify-content: space-around;
+            .pacbut1{
+                width: 30px; height: 30px;
+                transform: rotate(180deg);
+                cursor: pointer;
+                transition: 1s ease;
+                &:hover{
+                    transform: rotate(-540deg);
+                    opacity: 0.8;
+                }
+            }
+            .pacbut2{
+                width: 30px; height: 30px;
+                cursor: pointer;
+                transition: 1s ease;
+                &:hover{
+                    transform: rotate(720deg);
+                    opacity: 0.8;
+                }
+            }
         }
 
         .meetdesc{
@@ -97,13 +117,13 @@
                     width: 0;
                 }
                 &::before{
-                    animation: scrpactop 0.5s linear infinite;
+                    animation: scrpactop 0.4s linear infinite;
                     border: 1em solid #F7DE36;
                     border-right-color: transparent;
                     border-top-color: transparent;
                 }
                 &::after{
-                    animation: scrpacbot 0.5s linear infinite;
+                    animation: scrpacbot 0.4s linear infinite;
                     border: 1em solid #F7DE36;
                     border-left-color: transparent;
                     border-bottom-color: transparent;
@@ -140,25 +160,110 @@
                 &:hover{
                     color: white;
                 }
-            }            
+            }
         }
     }
     .movable{
+        position: absolute;
+        border: none;
+        outline: none;
+        padding: 0;
         width: 2em; height: 2em;
         background-color: #F7DE36;
         border-radius: 50%;
-        z-index: -1;
+        // z-index: -10;
+        cursor: pointer;
+        animation: szchange 0.5s alternate infinite;
+        $px: 4px;
+        $black: #000;
+        $white: #fff;
+        $shadow: rgba(0,0,0,0.1);
+        caret-color: transparent;
+
+        &:focus{
+            outline: none;
+            border: none;
+        }
+
+        @keyframes szchange {
+            to{
+                box-shadow: inset 0 0 1em 0 #FBED1F, 0 0 1em 0 #FBED1F;;
+            }
+        }
+        &:hover{
+            // background-color: red;
+            .speech{
+                opacity: 1;
+            }
+        }
+
+        .speech{
+            z-index: -1;
+            position: relative;
+            text-align: center;
+            font-family: 'PressStart2P';
+            font-size: 8px;
+            line-height: 1.4em;
+            background: transparent;
+            margin-left: 11*$px;
+            top: -8*$px;
+            padding: 2*$px;
+            color: white;
+            box-shadow: 0 -1*$px $white, 
+            0 -2*$px $black, 
+            $px 0 $white, 
+            $px -1*$px $black, 
+            2*$px 0 $black, 
+            0 $px $white, 
+            0 2*$px $black, 
+            -1*$px 0 $white, 
+            -1*$px  $px $black, 
+            -2*$px 0 $black, 
+            -1*$px -1*$px $black, 
+            $px $px $black;
+            box-sizing: border-box;
+            width: 250px;
+            opacity: 0;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                box-sizing: border-box;
+                height: $px;
+		        width: $px;
+		        left: -2*$px;
+		        background: white;
+		        box-shadow: -1*$px -1*$px $white,
+		        	-1*$px 0 $white,
+		        	-2*$px 0 $white,
+		        	0 -2*$px $white,
+		        	-1*$px 1*$px $black, 
+		        	-2*$px 1*$px $black, 
+		        	-3*$px 1*$px $black, 
+		        	-4*$px 1*$px $black,
+		        	-3*$px 0 $black, 
+		        	-2*$px -1*$px $black, 
+		        	-1*$px -2*$px $black,
+		        	0 -1*$px $white;
+            }
+        }
     }
     .hiddenpellet{
-        height: 1em;
-        width: 1em;
-        // border-radius: 50%;
+        position: absolute;
+        height: 1em; width: 1em;
         background-color: wheat;
         z-index: -5;
-        position: absolute;
-        transform: translateX(620px) translateY(-1565px);
+        transform: translateX(620px) translateY(-1380px);
+    }
+    img{
+        margin-top: 20px;
+        width: 100vw;
+        height: 338px;
     }
     button{
+        position: absolute;
+        transform: translateX(658px) translateY(-1250px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -180,7 +285,7 @@
         box-shadow: 
         inset 0 0 0.5em 0 #FBED1F,
         0 0 0.5em 0 #FBED1F;
-        position: relative;
+        // position: relative;
         font-family: 'ClashDisplay';
 
         &::after {
@@ -207,16 +312,11 @@
             }
         }
     }
-    img{
-        margin-top: 20px;
-        width: 100vw;
-        height: 338px;
-    }
 }
 
 @keyframes scrmove {
-	from { transform: translateX(-450vw); }
-	to { transform: translateX(110vw); }
+	from { transform: translateX(-500vw); }
+	to { transform: translateX(85vw); }
 }
 @keyframes scrpactop{
     0%,100%{
