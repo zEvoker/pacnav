@@ -45,12 +45,32 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        gap: 50px;
+        gap: 40px;
 
         .row{
+            margin: 10px 0;
             display: flex;
             align-items: center;
             justify-content: space-around;
+            .pacbut1{
+                width: 30px; height: 30px;
+                transform: rotate(180deg);
+                cursor: pointer;
+                transition: 1s ease;
+                &:hover{
+                    transform: rotate(-540deg);
+                    opacity: 0.8;
+                }
+            }
+            .pacbut2{
+                width: 30px; height: 30px;
+                cursor: pointer;
+                transition: 1s ease;
+                &:hover{
+                    transform: rotate(720deg);
+                    opacity: 0.8;
+                }
+            }
         }
 
         .meetdesc{
@@ -151,8 +171,8 @@
 }
 
 @keyframes scrmove {
-	from { transform: translateX(-450vw); }
-	to { transform: translateX(110vw); }
+	from { transform: translateX(-500vw); }
+	to { transform: translateX(85vw); }
 }
 @keyframes scrpactop{
     0%,100%{
