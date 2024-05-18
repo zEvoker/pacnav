@@ -163,6 +163,10 @@
             }
         }
     }
+    input{
+        opacity: 0;
+        cursor: pointer;
+    }
     .movable{
         position: absolute;
         border: none;
@@ -183,6 +187,9 @@
         &:focus{
             outline: none;
             border: none;
+            .speech{
+                opacity: 1;
+            }
         }
 
         @keyframes szchange {

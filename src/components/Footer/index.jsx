@@ -146,10 +146,10 @@ const Footer = () => {
                 <img className='pacbut1' src={setnum ? pacbutton : pacgraybut} alt="" onClick={()=> setsetnum(false)}/>
                 </div>
             </div>
-            <input type="text" value="" className='movable' style={{transform: `translateX(${xy[0]}px) translateY(${xy[1]}px)`,}} onKeyDown={keyPress}/>
-            {/* <div className="movable" style={{transform: `translateX(${xy[0]}px) translateY(${xy[1]}px)`,}}> */}
-                {/* <div className="speech">Use the arrow keys to move and get the hidden pellet for a special surprise!</div> */}
-            {/* </div> */}
+            <div className="movable" onClick={()=>setdir([0,0])}  style={{transform: `translateX(${xy[0]}px) translateY(${xy[1]}px)`,}} >
+                <input type="text" value="" onKeyDown={keyPress}/>
+                <div className="speech">Use the arrow keys to move and get the hidden pellet for a special surprise!</div>
+            </div>
             {reveal ?
             <button onClick={()=> {window.open("https://www.google.com/logos/2010/pacman10-i.html","_blank"); setxy([-600,-1350]); setReveal(false);}}>click me!</button>
             :
