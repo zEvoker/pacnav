@@ -20,7 +20,9 @@ const Footer = () => {
     const [setnum, setsetnum] = useState(true);
     const [xy,setxy] = useState([-680,-310]);
     const [reveal, setReveal] = useState(false);
-    
+    const [reveal2, setReveal2] = useState(false);
+    const [dir,setdir] = useState([0,0]);
+    const [vel,setvel] = useState(10);
 
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState([]);
@@ -39,6 +41,13 @@ const Footer = () => {
         return () => { clearInterval(ticker) };
     }, [text])
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+          move();
+        }, 100); 
+        return () => clearInterval(interval);
+      }, [xy]);
+
     const tick = () => {
         let curText = isDeleting ? txt[idx].slice(0, text.length - 1) : txt[idx].slice(0, text.length + 1);
         setText(curText);
@@ -52,59 +61,52 @@ const Footer = () => {
         }
     }
 
-    useEffect(() => {
-        document.addEventListener('keydown', keyPress);
-          return ()=> {
-            document.removeEventListener('keydown', keyPress);
-          }
-     }, []);
-
      const checkEasterEgg = (newLocn) => {
         if (newLocn[0] === 620 && newLocn[1] === -1330) {
             setReveal(true);
         }
+        if (newLocn[0] === -740 && newLocn[1] === 0) {
+            setReveal2(true);
+        }
+    }
+
+    const move = () => {
+        setxy(prev => {
+            let newX = prev[0] + dir[0] * vel;
+            let newY = prev[1] + dir[1] * vel;
+            if (newX < -740) newX = -740;
+            if (newX > 720) newX = 720;
+            if (newY < -1400) newY = -1400;
+            if (newY > 160) newY = 160;
+            checkEasterEgg([newX, newY]);
+            return [newX, newY];
+        });
     }
 
     const keyPress = (e) => {
         switch (e.which) {
             case 37: {
                 // left
-                setxy(prev => {
-                    const newLocn = [prev[0] - 10, prev[1]];
-                    checkEasterEgg(newLocn);
-                    return newLocn;
-                });
-                e.preventDefault();
+                setdir([-1,0]);
                 break;
             }
             case 38: {
                 // up
-                setxy(prev => {
-                    const newLocn = [prev[0], prev[1] - 10];
-                    checkEasterEgg(newLocn);
-                    return newLocn;
-                });
-                e.preventDefault();
+                setdir([0,-1]);
                 break;
             }
             case 39: {
                 // right
-                setxy(prev => {
-                    const newLocn = [prev[0] + 10, prev[1]];
-                    checkEasterEgg(newLocn);
-                    return newLocn;
-                });
-                e.preventDefault();
+                setdir([1,0]);
                 break;
             }
             case 40: {
                 // down
-                setxy(prev => {
-                    const newLocn = [prev[0], prev[1] + 10];
-                    checkEasterEgg(newLocn);
-                    return newLocn;
-                });
-                e.preventDefault();
+                setdir([0,1]);
+                break;
+            }
+            case 16: {
+                setvel(prev => 30-prev);
                 break;
             }
             default:
@@ -146,13 +148,24 @@ const Footer = () => {
                 <img className='pacbut1' src={setnum ? pacbutton : pacgraybut} alt="" onClick={()=> setsetnum(false)}/>
                 </div>
             </div>
-            <div className="movable" style={{transform: `translateX(${xy[0]}px) translateY(${xy[1]}px)`,}}>
-                <div className="speech">Use the arrow keys to move and get the hidden pellet for a special surprise!</div>
+            <div className="movable" onClick={()=>setdir([0,0])}  style={{transform: `translateX(${xy[0]}px) translateY(${xy[1]}px)`,}} >
+                <input type="text" value="" onKeyDown={keyPress}/>
+                {(dir[0]==0 && dir[1]==0) ?
+                    <div className="speech">Feed me the hidden pellet! Click me to start moving...  ( use arrow keys to move )</div>
+                :
+                    <div className="speech">Use arrow keys to move and shift to change speed. Find the hidden pellet!</div>
+                }
             </div>
             {reveal ?
-            <button onClick={()=> {window.open("https://www.google.com/logos/2010/pacman10-i.html","_blank"); setxy([-600,-1330]); setReveal(false);}}>click me!</button>
+            <button onClick={()=> {window.open("https://www.google.com/logos/2010/pacman10-i.html","_blank"); setxy([-600,-1330]); setReveal(false); setdir([0,0]);}}>click me!</button>
             :
-            <div className="hiddenpellet"></div>}
+            <div className="hiddenpellet"></div>
+            }
+            {reveal2?
+            <button className='easter2' onClick={()=> {window.open("https://www.google.com/logos/2010/pacman10-i.html","_blank"); setxy([-740,-310]); setReveal2(false); setdir([0,0]);}}>click me!</button>
+                :
+            <div className="hiddenpellet2"></div>
+            }
             <img src={footerpic} alt="" />
         </div>
     )
