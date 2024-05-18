@@ -244,16 +244,16 @@
         height: 1em; width: 1em;
         background-color: wheat;
         z-index: -5;
-        transform: translateX(620px) translateY(-1380px);
+        transform: translateX(620px) translateY(-1330px);
     }
     img{
         margin-top: 20px;
         width: 100vw;
-        height: 338px;
+        height: 267px;
     }
     button{
         position: absolute;
-        transform: translateX(658px) translateY(-1250px);
+        transform: translateX(658px) translateY(-1210px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -306,7 +306,7 @@
 
 @keyframes scrmove {
 	from { transform: translateX(-500vw); }
-	to { transform: translateX(85vw); }
+	to { transform: translateX(75vw); }
 }
 @keyframes scrpactop{
     0%,100%{
