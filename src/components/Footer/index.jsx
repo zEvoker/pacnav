@@ -14,7 +14,7 @@ import pacgraybut from '../../assets/images/pacgraybut.png'
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const Footer = () => {
+const Footer = ({setShow}) => {
     const descs=["begins each level moving at the same speed as all of the other ghosts, but after you've eaten a certain number of dots, he begins to speed up.","seems to have a tendency to go around blocks in an anticlockwise direction unlike Blinky and Clyde who seem to prefer going clockwise.","is dangerous because he's unpredictable. Given the same choices, he will often take different turns at different times.","is either short-sighted or stupid. He will often turn off rather than approach you. His heart doesn't seem to be in it at all.","is the titular protagonist of the Pac-Man series. Residing in Pac-Land, he regularly favors eating various types of Pac-Dots.",", also known as Pepper, is Pac-Man's wife and sidekick and is the mother of Jr. Pac-Man and Baby Pac-Man.","is the first-born son of Pac-Man and Ms. Pac-Man. During his adventures, he fell in love with Yum-Yum, Blinky's daughter.","is the second-born, infant child of Pac-Man and Ms. Pac-Man, and the younger sibling to Jr. Pac-Man."];
     const names=["Blinky","Pinky","Inky","Clyde"];
     const [setnum, setsetnum] = useState(true);
@@ -162,7 +162,7 @@ const Footer = () => {
             <div className="hiddenpellet"></div>
             }
             {reveal2?
-            <button className='easter2' onClick={()=> {window.open("https://www.google.com/logos/2010/pacman10-i.html","_blank"); setxy([-740,-310]); setReveal2(false); setdir([0,0]);}}>click me!</button>
+            <button className='easter2' onClick={()=> {setShow(true); setxy([-740,-310]); setReveal2(false); setdir([0,0]);}}>click me!</button>
                 :
             <div className="hiddenpellet2"></div>
             }

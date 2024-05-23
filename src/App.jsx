@@ -5,22 +5,27 @@ import Demo from './components/Demo'
 import Footer from './components/Footer'
 import Awards from './components/Awards'
 import Loader from 'react-loaders'
-
-// import Pacmap from './components/Map'
+import Pacmap from './components/Map'
+import { useState } from 'react'
 
 function App() {
+  const [show, setShow] = useState(false);
 
   return (
     <>
+      {show?
+      <div className="container">
+        <Pacmap setShow={setShow}/>
+      </div>
+      :
       <div className='container'>
       <div className="progress"><div className="travel"></div></div>
       <Header/>
-      {/* <Pacmap/> */}
       <Info/>
       <Demo/>
       <Awards/>
-      <Footer/>
-      </div>
+      <Footer setShow={setShow}/>
+      </div>}
       <Loader type="pacman"/>
     </>
   )

@@ -1,0 +1,46 @@
+.mappc{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .themap{
+        width: 95vw;
+        height: 80vh;
+        border: 5px solid black;
+        border-radius: 12px;
+        box-shadow: 
+            inset 0 0 1em 0 #FBED1F,
+            0 0 1em 0 #FBED1F;
+        overflow: hidden;
+    }
+
+    h1{
+        font-family: 'Autom';
+        font-size: 64px;
+        color: #FBED1F;
+        margin: 2rem;
+    }
+    .close{
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 36px;
+        cursor: pointer;
+        color: lightgray;
+
+        &:hover{
+            color: #FBED1F;
+            transform: scale(1.1);
+        }
+        &:active{
+            opacity: 0.8;
+        }
+    }
+}
